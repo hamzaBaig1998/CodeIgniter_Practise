@@ -1,0 +1,28 @@
+.post-date{
+   background-color: #f4f4f4;
+   margin: 3px 0;
+   display: block;
+   padding: 4px;
+}
+.back-button{
+   border:1px solid #18BC9C;
+   padding:5px 10px;
+   margin-bottom: 10px;
+   border-radius: 5px;
+   color: #f4f4f4 !important;
+   background: #18BC9C;
+   transition: all .45s;
+}
+.back-button:hover{
+   color:#18BC9C !important;
+   background: #f4f4f4;
+   box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+   transform: translateY(-2px);
+}
+.custom{
+   box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+   transition: all .75s;
+}
+.custom:hover{
+   transform: translateY(2px);
+}
