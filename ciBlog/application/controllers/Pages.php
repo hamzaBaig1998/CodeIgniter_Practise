@@ -5,8 +5,9 @@
                 show_404();
             }
             $data['title']=ucfirst($page);
-            $this->load->view('templates/header');
-            $this->load->view('pages/'.$page,$data);
+            $data['count']=$this->cart_model->update_cart();
+            $this->load->view('templates/header',$data);
+            $this->load->view('pages/'.$page);
             $this->load->view('templates/footer');
         }
     }

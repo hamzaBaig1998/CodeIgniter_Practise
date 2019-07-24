@@ -39,5 +39,11 @@
             $this->db->delete('users');
             return true;
         }
+        public function login(){
+            $query=$this->db->query("SELECT * FROM users WHERE email='".$this->input->post('email')."' and password='".$this->input->post('password')."'");
+            if($query->num_rows()>0){
+                return true;
+            }
+        }
     }
 ?>

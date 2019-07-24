@@ -11,7 +11,7 @@
             <th>Action</th>
             </tr>
         </thead>
-        <?php $total=0?>
+        <?php $total=0;$count=0;?>
     <?php foreach($cart as $item):?>
         <tr>
             <td><?=$item['name'];?></td>
@@ -22,9 +22,12 @@
         </tr>
         <?php 
         $total+=$item['quantity']*$item['price'];
+        $count++;
         ?>
     <?php endforeach;
         echo "<strong>Total: </strong>".$total;
+       // $_SESSION['cart']=$count;
     ?>
+
     </table>
 

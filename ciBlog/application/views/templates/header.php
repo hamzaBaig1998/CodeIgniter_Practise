@@ -1,3 +1,10 @@
+ <?php
+//  session_start();
+  //if(!isset($_SESSION['cart'])){
+    //$cart=0;
+  //}
+  //$count=$_SESSION['cart'];
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/style.css?v=<?=time();?>" type="text/css"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
-    <title>CiBlog</title>
+    <title>CodeIgniter-Practise project</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
@@ -31,13 +38,22 @@
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url();?>users">Users</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url();?>shop/view">Shop</a>
+      </li>
     </ul>
     <ul class="nav navbar-nav ml-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url();?>cart/view"><i class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-warning"><?=$count;?></span></a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url();?>posts/create">Create Post</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url();?>users/create">Create User</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url();?>users/login">Login</a>
       </li>
     </ul>
   </div>

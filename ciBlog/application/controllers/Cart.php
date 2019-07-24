@@ -4,8 +4,9 @@
         public function view(){
             $data['title']="Cart Items";
             $data['cart']=$this->cart_model->get_cart();
-            $this->load->view('templates/header');
-            $this->load->view('cart/view',$data);
+            $data['count']=$this->cart_model->update_cart();
+            $this->load->view('templates/header',$data);
+            $this->load->view('cart/view');
             $this->load->view('templates/footer');
         }
         public function remove($id){

@@ -5,7 +5,7 @@
 <?php echo validation_errors();?>
 
 
-<?php echo form_open('posts/create');?>
+<?php echo form_open_multipart('posts/create');?>
   <div class="form-group">
     <label>Title</label>
     <input type="text" class="form-control" name="title" placeholder="Add Title">
@@ -14,5 +14,7 @@
     <label>Body</label>
     <Textarea id="editor1" name="body" class="form-control" placeholder="Add Body"></Textarea>
   </div>
-  <button type="submit" class="btn btn-secondary custom btn-block">Submit</button>
+  <label>Upload Image</label><br>
+  <input type="file" name="userfile">
+  <button type="submit" class="btn btn-secondary custom btn-block mt-3">Submit</button>
 </form>
